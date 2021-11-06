@@ -1,1 +1,1 @@
-web: java -jar -Dspring.profiles.active=pdn target/market-1.0.jar
+web: java -jar -Dspring.profiles.active=pdn target/market-1.0-jar.with-dependencies.jar
