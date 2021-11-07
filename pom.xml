@@ -87,38 +87,34 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>2.5.6</version>  
-                </plugin>
-                        
-                <plugin>
-                    <!-- Build an executable JAR -->
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.2.0</version>
-                    <configuration>
-                        <archive>
-                            <index>true</index>
-                            <manifest>
-                                <mainClass>com.platzi.market.MarketApplication</mainClass>
-                            </manifest>
-                        </archive>
-                    </configuration>
+                    <version>2.5.6</version>
+                    <configuration>com.platzi.market.MarketApplication</configuration>  
                 </plugin>
                 
                 <plugin>
                     <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.4</version>
                     <configuration>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
                         <archive>
                             <manifest>
                                 <mainClass>com.platzi.market.MarketApplication</mainClass>
                             </manifest>
                         </archive>
-                        <descriptorRefs>
-                            <descriptorRef>jar-with-dependencies</descriptorRef>
-                        </descriptorRefs>
                     </configuration>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
-                        
+                
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
