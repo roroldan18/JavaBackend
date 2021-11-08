@@ -64,7 +64,7 @@
             <artifactId>spring-boot-starter-security</artifactId>
             <version>2.5.5</version>
         </dependency>
-
+       
 
 
         <dependency>
@@ -83,38 +83,27 @@
     <build>
         <pluginManagement>
             <plugins>
-                
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>2.5.6</version>
-                    <configuration>com.platzi.market.MarketApplication</configuration>  
+                    <version>2.5.6</version> 
                 </plugin>
                 
+
                 <plugin>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <version>2.4</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
                     <configuration>
-                        <descriptorRefs>
-                            <descriptorRef>jar-with-dependencies</descriptorRef>
-                        </descriptorRefs>
                         <archive>
                             <manifest>
                                 <mainClass>com.platzi.market.MarketApplication</mainClass>
                             </manifest>
                         </archive>
                     </configuration>
-                    <executions>
-                        <execution>
-                            <id>make-assembly</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>single</goal>
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
-                
+
+
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -144,6 +133,7 @@
                         </compilerArgs>
                     </configuration>
                 </plugin>
+            
             </plugins>
         </pluginManagement>
     </build>
