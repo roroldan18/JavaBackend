@@ -5,7 +5,7 @@ import com.platzi.market.persistence.entity.Producto;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.jpa.repository.Query;
+
 
 
 public interface ProductoCrudRepository extends CrudRepository<Producto, Integer> {

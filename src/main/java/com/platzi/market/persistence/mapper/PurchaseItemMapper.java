@@ -6,7 +6,8 @@ import com.platzi.market.domain.PurchaseItem;
 import com.platzi.market.persistence.entity.ComprasProducto;
 import org.mapstruct.*;
 
-@Mapper(componentModel="spring", uses = {ProductMapper.class})
+
+@Mapper(componentModel = "spring", uses = {ProductMapper.class})
 public interface PurchaseItemMapper {
     
     @Mappings({
